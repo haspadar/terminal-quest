@@ -36,7 +36,7 @@ sudo apt install fish git nodejs npm unzip
 Потом скачай репозиторий:
 
 ```bash
-git clone <URL_РЕПОЗИТОРИЯ>
+git clone https://github.com/haspadar/terminal-quest.git
 cd terminal-quest
 ```
 
