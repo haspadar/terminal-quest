@@ -1,0 +1,8 @@
+nickname=max
+region=europe
+level=27
+class=mage
+gold=1200
+clan=wolves
+email=max+alt@mail.ru
+created_at=2026-02-19

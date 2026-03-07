@@ -1,0 +1,8 @@
+nickname=anna
+region=europe
+level=38
+class=healer
+gold=8200
+clan=dragons
+email=anna@test.org
+created_at=2026-02-19

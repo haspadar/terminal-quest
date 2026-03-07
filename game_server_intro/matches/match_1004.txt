@@ -1,0 +1,9 @@
+id=match_1004
+timestamp=2026-02-21 21:03:03
+map=ice_caves
+mode=pve
+winner=team
+duration_min=27
+datacenter=asia-sg
+kills_li=9
+kills_max=6

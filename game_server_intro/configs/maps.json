@@ -1,0 +1,24 @@
+{
+  "maps": [
+    {
+      "id": "desert",
+      "mode": "pvp",
+      "size": "large"
+    },
+    {
+      "id": "forest",
+      "mode": "pvp",
+      "size": "medium"
+    },
+    {
+      "id": "arena",
+      "mode": "ranked",
+      "size": "small"
+    },
+    {
+      "id": "ice_caves",
+      "mode": "pve",
+      "size": "medium"
+    }
+  ]
+}

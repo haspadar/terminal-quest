@@ -1,0 +1,8 @@
+nickname=john
+region=america
+level=41
+class=warrior
+gold=9900
+clan=eagles
+email=john@gamehub.com
+created_at=2026-02-19

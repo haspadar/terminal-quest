@@ -1,0 +1,9 @@
+id=match_1001
+timestamp=2026-02-20 19:10:00
+map=desert
+mode=ranked
+winner=ivan
+duration_min=25
+datacenter=eu-west
+kills_ivan=15
+kills_anna=8

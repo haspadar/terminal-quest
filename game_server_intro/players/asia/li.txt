@@ -1,0 +1,8 @@
+nickname=li
+region=asia
+level=33
+class=archer
+gold=5400
+clan=jade
+email=li@domain.co
+created_at=2026-02-19

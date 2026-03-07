@@ -1,0 +1,8 @@
+nickname=carlos
+region=america
+level=29
+class=tank
+gold=3100
+clan=eagles
+email=carlos@domain.c
+created_at=2026-02-19

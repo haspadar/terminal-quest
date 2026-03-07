@@ -1,0 +1,9 @@
+id=match_1003
+timestamp=2026-02-21 18:22:45
+map=arena
+mode=ranked
+winner=john
+duration_min=19
+datacenter=na-east
+kills_john=18
+kills_ivan=16

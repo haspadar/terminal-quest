@@ -1,0 +1,28 @@
+2026-02-21 09:11:00 INFO Purchase user=li item=HealthPotion price=2.99
+2026-02-21 09:28:00 ERROR AuthFailed email=li@domain.co reason=account_locked ip=192.168.1.10
+2026-02-21 09:43:00 ERROR Disconnect user=li code=E2004
+2026-02-21 09:58:00 WARNING ServerLag ms=1200 region=na-east
+2026-02-21 10:07:00 INFO MatchStart id=match_1001 map=ice_caves mode=ranked
+2026-02-21 10:18:00 ERROR AuthFailed email=anna@test.org reason=rate_limited ip=172.16.0.1
+2026-02-21 10:41:00 INFO PlayerConnected user=kenji ip=172.16.0.1
+2026-02-21 11:06:00 INFO MatchStart id=match_1004 map=arena mode=ranked
+2026-02-21 11:09:00 WARNING ServerLag ms=120 region=asia-sg
+2026-02-21 11:12:00 WARNING ServerLag ms=800 region=na-east
+2026-02-21 11:29:00 INFO Purchase user=anna item=RaidTicket price=4.99
+2026-02-21 11:39:00 ERROR AuthFailed email=li@domain.co reason=wrong_password ip=10.0.0.5
+2026-02-21 11:56:00 ERROR AuthFailed email=anna@test.org reason=rate_limited ip=203.0.113.7
+2026-02-21 12:04:00 WARNING ServerLag ms=180 region=eu-west
+2026-02-21 12:10:00 INFO PlayerConnected user=ivan ip=203.0.113.7
+2026-02-21 12:25:00 INFO PlayerConnected user=max ip=172.16.0.1
+2026-02-21 12:36:00 ERROR AuthFailed email=ivan.petrov@gmail.com reason=wrong_password ip=203.0.113.7
+2026-02-21 12:49:00 ERROR Disconnect user=ivan code=E3002
+2026-02-21 13:11:00 INFO Purchase user=carlos item=LootBox price=4.99
+2026-02-21 13:13:00 INFO Purchase user=li item=ManaPotion price=2.99
+2026-02-21 13:14:00 INFO PlayerConnected user=anna ip=172.16.0.1
+2026-02-21 13:30:00 WARNING ServerLag ms=800 region=eu-west
+2026-02-21 13:33:00 WARNING ServerLag ms=400 region=eu-west
+2026-02-21 13:53:00 INFO Purchase user=john item=RaidTicket price=4.99
+2026-02-21 13:54:00 ERROR AuthFailed email=ivan.petrov@gmail.com reason=rate_limited ip=203.0.113.7
+2026-02-21 14:09:00 ERROR AuthFailed email=kenji@sub.domain.com reason=rate_limited ip=192.168.1.10
+2026-02-21 14:18:00 ERROR AuthFailed email=anna@test.org reason=rate_limited ip=10.0.0.5
+2026-02-21 14:22:00 INFO Purchase user=max item=Skin_Dragon price=19.99

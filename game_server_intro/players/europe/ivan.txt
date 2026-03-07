@@ -1,0 +1,8 @@
+nickname=ivan
+region=europe
+level=42
+class=warrior
+gold=15300
+clan=dragons
+email=ivan.petrov@gmail.com
+created_at=2026-02-19

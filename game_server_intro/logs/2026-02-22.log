@@ -1,0 +1,28 @@
+2026-02-22 09:10:00 INFO Purchase user=anna item=RaidTicket price=19.99
+2026-02-22 09:14:00 INFO MatchStart id=match_1003 map=arena mode=ranked
+2026-02-22 09:28:00 WARNING ServerLag ms=1200 region=na-east
+2026-02-22 09:42:00 ERROR Disconnect user=max code=E3002
+2026-02-22 09:44:00 INFO Purchase user=kenji item=Skin_Dragon price=19.99
+2026-02-22 09:55:00 WARNING ServerLag ms=180 region=na-east
+2026-02-22 10:01:00 INFO Purchase user=anna item=Skin_Dragon price=4.99
+2026-02-22 10:19:00 INFO MatchStart id=match_1002 map=arena mode=pve
+2026-02-22 10:20:00 INFO Purchase user=carlos item=RaidTicket price=2.99
+2026-02-22 10:36:00 WARNING ServerLag ms=250 region=eu-west
+2026-02-22 10:46:00 INFO PlayerConnected user=anna ip=192.168.1.10
+2026-02-22 11:01:00 INFO MatchStart id=match_1002 map=forest mode=pvp
+2026-02-22 11:19:00 INFO PlayerConnected user=ivan ip=10.0.0.5
+2026-02-22 11:42:00 INFO PlayerConnected user=ivan ip=192.168.1.10
+2026-02-22 11:57:00 WARNING ServerLag ms=180 region=eu-west
+2026-02-22 11:58:00 INFO MatchStart id=match_1001 map=arena mode=pvp
+2026-02-22 12:21:00 WARNING ServerLag ms=120 region=na-east
+2026-02-22 12:37:00 INFO MatchStart id=match_1002 map=ice_caves mode=pvp
+2026-02-22 12:45:00 ERROR AuthFailed email=kenji@sub.domain.com reason=account_locked ip=192.168.1.10
+2026-02-22 13:08:00 INFO PlayerConnected user=anna ip=203.0.113.7
+2026-02-22 13:29:00 ERROR Disconnect user=john code=E2004
+2026-02-22 13:33:00 INFO PlayerConnected user=ivan ip=172.16.0.1
+2026-02-22 13:47:00 INFO PlayerConnected user=ivan ip=203.0.113.7
+2026-02-22 14:08:00 ERROR AuthFailed email=anna@test.org reason=wrong_password ip=203.0.113.7
+2026-02-22 14:28:00 WARNING ServerLag ms=1200 region=asia-sg
+2026-02-22 14:29:00 INFO Purchase user=carlos item=Skin_Dragon price=9.99
+2026-02-22 14:43:00 ERROR AuthFailed email=anna@test.org reason=wrong_password ip=203.0.113.7
+2026-02-22 14:54:00 ERROR AuthFailed email=max+alt@mail.ru reason=rate_limited ip=198.51.100.42

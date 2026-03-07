@@ -1,0 +1,9 @@
+id=match_1002
+timestamp=2026-02-20 20:05:12
+map=forest
+mode=pvp
+winner=kenji
+duration_min=31
+datacenter=eu-west
+kills_kenji=22
+kills_john=14
