@@ -357,19 +357,13 @@ tree --prune -P '*anna*'
 
 ```text
 .
-├── chat
-├── configs
 ├── items
 │   └── items/anna_inventory.csv
-├── logs
-├── matches
 └── players
-    ├── america
-    ├── asia
     └── europe
         └── players/europe/anna.txt
 
-10 directories, 2 files
+4 directories, 2 files
 ```
 
 Обрати внимание: `tree` оставил не только сами совпавшие файлы, но и папки, через которые к ним можно дойти. Это нормально: иначе путь до найденного файла просто потерялся бы.
