@@ -29,6 +29,33 @@ players
 
 Видно, что в папке есть и вложенные папки, и обычные файлы, и архив. Но `ls` показывает только верхний уровень. А что лежит внутри `players`, `logs` или `matches`?
 
+Если нужен более технический взгляд, обычно сразу запускают `ls -la`: он показывает подробности и не прячет скрытые файлы.
+
+```bash
+ls -la
+```
+
+Вывод:
+
+```text
+total 44
+drwxr-xr-x 10 student student 4096 Feb 22 12:00 .
+drwxr-xr-x  3 student student 4096 Feb 22 12:00 ..
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 .cache
+-rw-r--r--  1 student student   42 Feb 22 12:00 .env.example
+-rw-r--r--  1 student student   67 Feb 22 12:00 .notes
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 chat
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 configs
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 items
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 logs
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 matches
+-rw-r--r--  1 student student 1820 Feb 22 12:00 ops_snapshot_2026-02-22.zip
+-rw-r--r--  1 student student  812 Feb 22 12:00 page.html
+drwxr-xr-x  6 student student 4096 Feb 22 12:00 players
+```
+
+Теперь видно, что в наборе есть скрытые служебные файлы и папки. Но содержимое вложенных директорий всё ещё не раскрыто.
+
 Попроси `ls` пройтись по всем вложенным папкам:
 
 ```bash
@@ -61,7 +88,41 @@ asia
 europe
 ```
 
-Это уже лучше. Но у такого подхода есть предел. `ls` всё равно показывает содержимое блоками — при большой вложенности глазами читать его тяжело.
+Если объединить рекурсивный обход с подробным выводом и скрытыми файлами, получится уже совсем серьёзная простыня:
+
+```bash
+ls -Rla
+```
+
+Фрагмент вывода:
+
+```text
+.:
+total 44
+drwxr-xr-x 10 student student 4096 Feb 22 12:00 .
+drwxr-xr-x  3 student student 4096 Feb 22 12:00 ..
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 .cache
+-rw-r--r--  1 student student   42 Feb 22 12:00 .env.example
+-rw-r--r--  1 student student   67 Feb 22 12:00 .notes
+drwxr-xr-x  6 student student 4096 Feb 22 12:00 players
+
+./players:
+total 24
+drwxr-xr-x  6 student student 4096 Feb 22 12:00 .
+drwxr-xr-x 10 student student 4096 Feb 22 12:00 ..
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 .drafts
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 america
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 asia
+drwxr-xr-x  2 student student 4096 Feb 22 12:00 europe
+
+./players/.drafts:
+total 8
+drwxr-xr-x 2 student student 4096 Feb 22 12:00 .
+drwxr-xr-x 6 student student 4096 Feb 22 12:00 ..
+-rw-r--r-- 1 student student   19 Feb 22 12:00 anna.tmp
+```
+
+Это уже лучше, и информации здесь много. Но у такого подхода есть предел. `ls` всё равно показывает содержимое блоками — при большой вложенности глазами читать его тяжело.
 
 Здесь и нужен `tree`. Он решает ту же задачу обзора, но показывает папку в виде дерева. Один запуск, и уже видно, как всё связано между собой.
 
@@ -529,7 +590,8 @@ unzip -l ops_snapshot_2026-02-22.zip | grep anna
 ## Шпаргалка
 
 - `tree` показать дерево текущей папки.
-- `ls -R` рекурсивно показать содержимое папки блоками.
+- `ls -la` показать подробный список, включая скрытые файлы.
+- `ls -Rla` рекурсивно показать содержимое папки с подробностями и скрытыми файлами.
 - `tree путь` показать дерево указанной папки.
 - `tree -L 2` ограничить глубину.
 - `tree -d` показать только папки.
