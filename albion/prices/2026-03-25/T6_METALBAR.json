@@ -1,0 +1,8 @@
+[
+  {"item_id":"T6_METALBAR","city":"Caerleon",      "sell_price_min":3526,"buy_price_max":3306,"date":"2026-03-25"},
+  {"item_id":"T6_METALBAR","city":"Bridgewatch",   "sell_price_min":3141,"buy_price_max":2901,"date":"2026-03-25"},
+  {"item_id":"T6_METALBAR","city":"Martlock",      "sell_price_min":3049,"buy_price_max":2800,"date":"2026-03-25"},
+  {"item_id":"T6_METALBAR","city":"Thetford",      "sell_price_min":3068,"buy_price_max":2771,"date":"2026-03-25"},
+  {"item_id":"T6_METALBAR","city":"Fort Sterling", "sell_price_min":3010,"buy_price_max":2800,"date":"2026-03-25"},
+  {"item_id":"T6_METALBAR","city":"Lymhurst",      "sell_price_min":3068,"buy_price_max":2979,"date":"2026-03-25"}
+]

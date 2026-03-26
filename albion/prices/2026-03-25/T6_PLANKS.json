@@ -1,0 +1,8 @@
+[
+  {"item_id":"T6_PLANKS","city":"Caerleon",      "sell_price_min":3094,"buy_price_max":3081,"date":"2026-03-25"},
+  {"item_id":"T6_PLANKS","city":"Bridgewatch",   "sell_price_min":3368,"buy_price_max":2605,"date":"2026-03-25"},
+  {"item_id":"T6_PLANKS","city":"Martlock",      "sell_price_min":2996,"buy_price_max":2700,"date":"2026-03-25"},
+  {"item_id":"T6_PLANKS","city":"Thetford",      "sell_price_min":2595,"buy_price_max":2415,"date":"2026-03-25"},
+  {"item_id":"T6_PLANKS","city":"Fort Sterling", "sell_price_min":2519,"buy_price_max":2462,"date":"2026-03-25"},
+  {"item_id":"T6_PLANKS","city":"Lymhurst",      "sell_price_min":2692,"buy_price_max":2557,"date":"2026-03-25"}
+]

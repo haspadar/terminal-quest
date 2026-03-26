@@ -1,0 +1,9 @@
+[
+  {"item_id":"T6_BAG","city":"Caerleon",      "sell_price_min":46991,"buy_price_max":21000,"date":"2026-03-26"},
+  {"item_id":"T6_BAG","city":"Bridgewatch",   "sell_price_min":59956,"buy_price_max":34125,"date":"2026-03-26"},
+  {"item_id":"T6_BAG","city":"Martlock",      "sell_price_min":52400,"buy_price_max":28500,"date":"2026-03-26"},
+  {"item_id":"T6_BAG","city":"Thetford",      "sell_price_min":42000,"buy_price_max":37673,"date":"2026-03-26"},
+  {"item_id":"T6_BAG","city":"Fort Sterling", "sell_price_min":42173,"buy_price_max":35999,"date":"2026-03-26"},
+  {"item_id":"T6_BAG","city":"Lymhurst",      "sell_price_min":53200,"buy_price_max":36272,"date":"2026-03-26"},
+  {"item_id":"T6_BAG","city":"Black Market",  "sell_price_min":47288,"buy_price_max":34760,"date":"2026-03-26"}
+]
