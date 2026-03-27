@@ -128,8 +128,16 @@ drwxr-xr-x 6 student student 4096 Feb 22 12:00 ..
 
 ## Установка
 
+Ubuntu / WSL:
+
 ```bash
 sudo apt install tree
+```
+
+Arch:
+
+```bash
+sudo pacman -S tree
 ```
 
 ## Синтаксис
@@ -435,7 +443,7 @@ tree -L 2 -o structure.txt
 
 1. Утилита `tree` пришла из мира DOS. Первая версия для UNIX/Linux появилась в 1990-х годах.
 
-2. `tree` не входит в GNU coreutils, поэтому на Ubuntu его нужно ставить отдельно: `sudo apt install tree`.
+2. `tree` не входит в GNU coreutils, поэтому его обычно ставят отдельно: на Ubuntu через `sudo apt install tree`, на Arch через `sudo pacman -S tree`.
 
 ## Практика
 

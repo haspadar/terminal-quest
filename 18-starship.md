@@ -4,16 +4,16 @@
 
 ## Установка
 
-На macOS:
-
-```bash
-brew install starship
-```
-
-На Linux:
+Ubuntu / WSL:
 
 ```bash
 curl -sS https://starship.rs/install.sh | sh
+```
+
+Arch:
+
+```bash
+sudo pacman -S starship
 ```
 
 Затем добавьте строку в конфиг fish:

@@ -4,21 +4,29 @@
 
 ## Установка
 
-В WSL Ubuntu curl обычно уже есть. Проверьте:
+Проверьте, установлен ли `curl`:
 
-```fish
+```bash
 curl --version
 ```
 
-Если нет:
+Если команды нет, поставьте пакет.
 
-```fish
+Ubuntu / WSL:
+
+```bash
 sudo apt install curl
+```
+
+Arch:
+
+```bash
+sudo pacman -S curl
 ```
 
 ## Базовый GET-запрос
 
-```fish
+```bash
 curl https://httpbin.org/get
 ```
 
@@ -26,7 +34,7 @@ curl https://httpbin.org/get
 
 Вывод будет слеплен в одну строку. Чтобы читать удобно — pipe в `jq`:
 
-```fish
+```bash
 curl -s https://httpbin.org/get | jq '.'
 ```
 
@@ -36,7 +44,7 @@ curl -s https://httpbin.org/get | jq '.'
 
 `-i` показывает заголовки ответа перед телом:
 
-```fish
+```bash
 curl -i https://httpbin.org/get
 ```
 
@@ -44,7 +52,7 @@ curl -i https://httpbin.org/get
 
 Только заголовки без тела — `-I`:
 
-```fish
+```bash
 curl -I https://httpbin.org/get
 ```
 
@@ -52,7 +60,7 @@ curl -I https://httpbin.org/get
 
 Чтобы увидеть только код ответа:
 
-```fish
+```bash
 curl -s -o /dev/null -w "%{http_code}\n" https://httpbin.org/status/200
 curl -s -o /dev/null -w "%{http_code}\n" https://httpbin.org/status/404
 curl -s -o /dev/null -w "%{http_code}\n" https://httpbin.org/status/500
@@ -64,13 +72,13 @@ curl -s -o /dev/null -w "%{http_code}\n" https://httpbin.org/status/500
 
 Без `-L` curl останавливается на редиректе. Попробуйте:
 
-```fish
+```bash
 curl -s -o /dev/null -w "%{http_code}\n" https://httpbin.org/redirect/1
 ```
 
 Должен появиться `302`. Теперь с `-L`:
 
-```fish
+```bash
 curl -s -L -o /dev/null -w "%{http_code}\n" https://httpbin.org/redirect/1
 ```
 
@@ -80,7 +88,7 @@ curl -s -L -o /dev/null -w "%{http_code}\n" https://httpbin.org/redirect/1
 
 `-H` добавляет заголовок к запросу. Посмотрим, что получит сервер:
 
-```fish
+```bash
 curl -s -H "User-Agent: AlbionBot/1.0" https://httpbin.org/headers | jq '.headers["User-Agent"]'
 ```
 
@@ -88,13 +96,13 @@ curl -s -H "User-Agent: AlbionBot/1.0" https://httpbin.org/headers | jq '.header
 
 ## Сохранить ответ в файл: -o
 
-```fish
+```bash
 curl -s https://httpbin.org/get -o response.json
 ```
 
 Файл появится в текущей папке. Проверьте:
 
-```fish
+```bash
 jq '.' response.json
 ```
 
@@ -102,7 +110,7 @@ jq '.' response.json
 
 `-X POST` меняет метод, `-d` передаёт тело запроса:
 
-```fish
+```bash
 curl -s -X POST \
   -H "Content-Type: application/json" \
   -d '{"city": "Caerleon", "price": 46991}' \
@@ -115,7 +123,7 @@ curl -s -X POST \
 
 Теперь — настоящий запрос. Получите актуальные цены T6_BAG из API:
 
-```fish
+```bash
 curl -s "https://www.albion-online-data.com/api/v2/stats/prices/T6_BAG?locations=Caerleon,Bridgewatch&qualities=1" | jq '.'
 ```
 
@@ -123,14 +131,14 @@ curl -s "https://www.albion-online-data.com/api/v2/stats/prices/T6_BAG?locations
 
 Найдите самый дешёвый город прямо в одной команде:
 
-```fish
+```bash
 curl -s "https://www.albion-online-data.com/api/v2/stats/prices/T6_BAG?locations=Caerleon,Bridgewatch,Martlock,Thetford,Fort+Sterling,Lymhurst&qualities=1" \
   | jq 'min_by(.sell_price_min) | {city, price: .sell_price_min}'
 ```
 
 А сохранить свежие данные в файл — одна строка:
 
-```fish
+```bash
 curl -s "https://www.albion-online-data.com/api/v2/stats/prices/T6_BAG?locations=Caerleon,Bridgewatch,Martlock,Thetford,Fort+Sterling,Lymhurst&qualities=1" \
   -o albion/prices/today_T6_BAG.json
 ```
