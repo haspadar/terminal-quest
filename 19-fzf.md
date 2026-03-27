@@ -131,23 +131,27 @@ set -x FZF_DEFAULT_COMMAND 'fd --type f'
 Добавьте предпросмотр содержимого прямо в интерфейсе:
 
 ```fish
-fzf --preview 'cat {}'
+fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
 ```
 
-Правая панель показывает содержимое файла, на котором стоит курсор. Перейдите стрелками по файлам `matches/` — правая часть будет обновляться без Enter.
+Правая панель показывает содержимое файла, на котором стоит курсор. `bat` сохраняет цвета, показывает номера строк и не пытается целиком грузить слишком большие файлы. Перейдите стрелками по файлам `matches/` — правая часть будет обновляться без Enter.
 
 Чтобы не набирать `--preview` каждый раз, добавьте в конфиг:
 
 ```fish
-set -x FZF_DEFAULT_OPTS '--preview "cat {}"'
+set -x FZF_DEFAULT_OPTS '--preview "bat --style=numbers --color=always --line-range :500 {}"'
 ```
+
+- `--color=always` — не отключать цвета внутри preview.
+- `--style=numbers` — показывать номера строк.
+- `--line-range :500` — ограничить предпросмотр первыми 500 строками.
 
 ## Шпаргалка
 
 - `fzf` — интерактивный выбор файла из текущей папки.
 - `cmd | fzf` — фильтровать произвольный список строк.
 - `cat (fzf)` — выбрать файл и передать его команде.
-- `fzf --preview 'cat {}'` — показывать содержимое при навигации.
+- `fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'` — показывать содержимое при навигации.
 - `set -x FZF_DEFAULT_COMMAND 'fd --type f'` — использовать `fd` как источник списка.
 - Ctrl+R — поиск по истории fish (после подключения key-bindings).
 - Ctrl+T — вставить путь к файлу в текущую команду.
@@ -167,6 +171,6 @@ set -x FZF_DEFAULT_OPTS '--preview "cat {}"'
 
    Наберите имя игрока в `fzf`, выберите его файл — содержимое профиля должно появиться в терминале.
 
-19.3. Задайте `set -x FZF_DEFAULT_COMMAND 'fd --type f'` и запустите `fzf --preview 'cat {}'`. Найдите файл `server.ini`.
+19.3. Задайте `set -x FZF_DEFAULT_COMMAND 'fd --type f'` и `set -x FZF_DEFAULT_OPTS '--preview "bat --style=numbers --color=always --line-range :500 {}"'`. Запустите `fzf`. Найдите файл `server.ini`.
 
    В левой панели должен появиться `configs/server.ini`, в правой — его содержимое с секцией `[server]` и настройками сервера.
